@@ -22,6 +22,17 @@
   --shadow-soft: 0 12px 32px rgba(74, 46, 42, 0.1);
 }
 
+/* ============ Fruit scale ============ */
+.float,
+.section-fruit,
+.map-char,
+.detail-icon,
+.rsvp-cheer,
+.footer-fruits,
+.parade {
+  zoom: 1.08;
+}
+
 /* ============ Base ============ */
 *,
 *::before,
@@ -501,6 +512,7 @@ h2 {
 
 .parade {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
   gap: 10px;
@@ -710,6 +722,7 @@ h2 {
 
 .footer-fruits {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
   gap: 8px;
@@ -842,6 +855,29 @@ h2 {
 
   .location {
     padding-top: 44px;
+  }
+
+  .float,
+  .section-fruit,
+  .map-char,
+  .detail-icon,
+  .rsvp-cheer,
+  .footer-fruits,
+  .parade {
+    zoom: 1.15;
+  }
+}
+
+/* ============ Large desktop ============ */
+@media (min-width: 1100px) {
+  .float,
+  .section-fruit,
+  .map-char,
+  .detail-icon,
+  .rsvp-cheer,
+  .footer-fruits,
+  .parade {
+    zoom: 1.22;
   }
 }
 
