@@ -1,22 +1,41 @@
-import { MapPin } from 'lucide-react'
-import { OrangeClock, Strawberry, WaveDivider } from './Fruits'
+import {
+  Apple,
+  Grapes,
+  Lemon,
+  OrangeClock,
+  OrangeSlice,
+  Pear,
+  Strawberry,
+  WaveDivider,
+} from './Fruits'
 import { Reveal } from './Reveal'
 
 export function EventDetails() {
   return (
     <section className="details" aria-labelledby="details-title">
       <div className="details-inner">
+        <Pear className="section-fruit sf-1" width={54} height={54} pose={{ arms: 'shy', mouth: 'soft' }} />
+        <OrangeSlice className="section-fruit sf-2" width={48} height={48} pose={{ arms: 'wave', mood: 'wink' }} />
+        <Grapes className="section-fruit sf-3" width={44} height={44} pose={{ arms: 'down', mood: 'happy' }} />
+        <Lemon className="section-fruit sf-4" width={46} height={46} pose={{ arms: 'shy' }} />
+        <Strawberry
+          className="section-fruit section-fruit--sway sf-5"
+          width={48}
+          height={48}
+          pose={{ arms: 'wave' }}
+        />
+        <Apple className="section-fruit sf-6" width={46} height={46} pose={{ arms: 'up', mouth: 'cheer' }} />
         <div className="container">
           <Reveal className="section-head">
-          <h2 id="details-title">El gran día</h2>
-          <p className="lead">Una mañana entera de fiesta. ¡Apunta la fecha y no llegues tarde!</p>
+            <h2 id="details-title">El gran día</h2>
+            <p className="lead">Una mañana entera de fiesta. ¡Apunta la fecha y no llegues tarde!</p>
           </Reveal>
 
           <div className="details-list">
             <Reveal>
               <article className="detail detail--date">
                 <div className="detail-icon" aria-hidden="true">
-                  <Strawberry width={40} height={40} />
+                  <Strawberry width={52} height={52} pose={{ arms: 'up', mouth: 'cheer' }} />
                 </div>
                 <div>
                   <p className="detail-label">Cuándo</p>
@@ -29,7 +48,7 @@ export function EventDetails() {
             <Reveal delay={90}>
               <article className="detail detail--time">
                 <div className="detail-icon" aria-hidden="true">
-                  <OrangeClock width={40} height={40} />
+                  <OrangeClock width={52} height={52} pose={{ arms: 'down', mood: 'wink' }} />
                 </div>
                 <div>
                   <p className="detail-label">A qué hora</p>
@@ -42,7 +61,7 @@ export function EventDetails() {
             <Reveal delay={180}>
               <article className="detail detail--place">
                 <div className="detail-icon" aria-hidden="true">
-                  <MapPin size={34} strokeWidth={2.4} />
+                  <Grapes width={50} height={50} pose={{ arms: 'shy', mouth: 'soft' }} />
                 </div>
                 <div>
                   <p className="detail-label">Dónde</p>
