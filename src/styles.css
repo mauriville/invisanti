@@ -433,10 +433,11 @@ h2 {
   transform: rotate(7deg);
 }
 
-.map-art {
+.map-embed {
   display: block;
   width: 100%;
-  height: auto;
+  height: 300px;
+  border: 0;
   border-radius: 28px 28px 0 0;
 }
 
@@ -789,27 +790,6 @@ h2 {
   }
 }
 
-@keyframes pin-pulse {
-  0% {
-    transform: scale(0.45);
-    opacity: 0.7;
-  }
-  70% {
-    transform: scale(1.6);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.6);
-    opacity: 0;
-  }
-}
-
-.map-pulse {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: pin-pulse 2.4s ease-out infinite;
-}
-
 /* ============ Desktop ============ */
 @media (min-width: 760px) {
   .container {
@@ -890,7 +870,6 @@ h2 {
   .hero-content > *,
   .stepper-number,
   .rsvp-feedback,
-  .map-pulse,
   .section-fruit--sway {
     animation: none !important;
   }

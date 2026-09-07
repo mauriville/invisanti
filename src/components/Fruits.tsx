@@ -605,55 +605,6 @@ export function WaveDivider({
   )
 }
 
-export function MapArt(props: FruitProps) {
-  const uid = useFruitId()
-  const g = (n: string) => `${uid}-${n}`
-  return (
-    <FruitSvg viewBox="0 0 400 240" {...props}>
-      <defs>
-        <BodyGrad id={g('pin')} hi="#FF8FA3" mid="#FF5068" deep="#D93A4E" />
-        <GlossGrad id={g('hl')} />
-      </defs>
-      <rect width="400" height="240" fill="#FFF3D6" />
-      <g fill="none" stroke="#FFFBEE" strokeWidth="26" strokeLinecap="round">
-        <path d="M-20 78 C 80 66, 150 116, 230 104 S 380 134, 430 122" />
-        <path d="M118 -20 C 132 60, 96 140, 116 260" />
-        <path d="M-20 196 C 100 176, 260 214, 430 184" />
-      </g>
-      <g fill="none" stroke="#EFD9A8" strokeWidth="2.4" strokeDasharray="9 11" strokeLinecap="round">
-        <path d="M-20 78 C 80 66, 150 116, 230 104 S 380 134, 430 122" />
-        <path d="M118 -20 C 132 60, 96 140, 116 260" />
-        <path d="M-20 196 C 100 176, 260 214, 430 184" />
-      </g>
-      <ellipse cx="332" cy="42" rx="48" ry="27" fill="#CDE8C0" />
-      <circle cx="316" cy="36" r="6.5" fill="#9CD08B" />
-      <circle cx="334" cy="48" r="8" fill="#9CD08B" />
-      <circle cx="352" cy="34" r="5.5" fill="#9CD08B" />
-      <g>
-        <rect x="34" y="128" width="24" height="16" rx="3" fill="#FFDFC2" />
-        <path d="M32 128 46 116l14 12Z" fill="#F4A25B" />
-        <rect x="252" y="140" width="26" height="17" rx="3" fill="#FFDFC2" />
-        <path d="M250 140 265 127l15 13Z" fill="#F4A25B" />
-        <rect x="150" y="196" width="24" height="16" rx="3" fill="#FFDFC2" />
-        <path d="M148 196 162 184l14 12Z" fill="#F4A25B" />
-      </g>
-      <circle className="map-pulse" cx="210" cy="94" r="24" fill="none" stroke="#D93A4E" strokeWidth="4" opacity=".6" />
-      <ellipse cx="210" cy="132" rx="17" ry="4" fill="#4A2E2A" opacity="0.18" />
-      <path
-        d="M210 130c-14.5-12.5-24-24.5-24-38a24 24 0 1 1 48 0c0 13.5-9.5 25.5-24 38Z"
-        fill={`url(#${g('pin')})`}
-      />
-      <ellipse cx="201" cy="84" rx="6.5" ry="4.2" transform="rotate(-18 201 84)" fill={`url(#${g('hl')})`} />
-      <circle cx="210" cy="92" r="9.5" fill="#FFF8E7" />
-      <ellipse cx="222" cy="66" rx="7" ry="3.4" transform="rotate(28 222 66)" fill="#35B768" />
-      <text x="30" y="62" fill="#A08454" fontSize="12" fontWeight="700">Calle 28</text>
-      <text x="128" y="158" fill="#A08454" fontSize="12" fontWeight="700">Calle 2</text>
-      <text x="284" y="222" fill="#A08454" fontSize="12" fontWeight="700">Calle 3</text>
-      <text x="230" y="86" fill="#D93A4E" fontSize="14" fontWeight="800">Chiquilladas</text>
-    </FruitSvg>
-  )
-}
-
 export function ParadeDivider() {
   return (
     <div className="parade" aria-hidden="true">

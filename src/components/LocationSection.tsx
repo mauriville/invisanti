@@ -1,9 +1,12 @@
 import { MapPin } from 'lucide-react'
-import { Apple, Grapes, MapArt, OrangeSlice, ParadeDivider, Pear, Strawberry, Watermelon } from './Fruits'
+import { Apple, Grapes, OrangeSlice, ParadeDivider, Pear, Strawberry, Watermelon } from './Fruits'
 import { Reveal } from './Reveal'
 
 export const MAPS_URL =
-  'https://www.google.com/maps/place/Sal%C3%B3n+De+Eventos+Infantiles+Chiquilladas/@-16.5218842,-68.0655214,363m/data=!3m1!1e3!4m6!3m5!1s0x915f216c1e192e8b:0x2195b09e2d7e722b!8m2!3d-16.5213267!4d-68.0657233!16s%2Fg%2F11c1bgfj0h?entry=ttu'
+  'https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n+de+Eventos+Infantiles+Chiquilladas%2C+Entre+calles+2+y+3%2C+La+Barqueta+de+Achumani%2C+La+Paz%2C+Bolivia'
+
+export const MAPS_EMBED_URL =
+  'https://www.google.com/maps?q=-16.5213267,-68.0657233&z=17&hl=es&output=embed'
 
 export function LocationSection() {
   return (
@@ -30,7 +33,14 @@ export function LocationSection() {
             <span className="map-char map-char--br" aria-hidden="true">
               <Grapes width={42} height={42} pose={{ arms: 'up', mood: 'wink' }} />
             </span>
-            <MapArt className="map-art" />
+            <iframe
+              className="map-embed"
+              src={MAPS_EMBED_URL}
+              title="Mapa de la ubicación del Salón de Eventos Infantiles Chiquilladas"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
             <div className="map-body">
               <p className="venue-name">Salón de Eventos Infantiles Chiquilladas</p>
               <p className="venue-address">
