@@ -73,7 +73,7 @@ export function EventDetails() {
           </div>
         </div>
       </div>
-      <WaveDivider className="wave" flip style={{ color: 'var(--lemon-band)' }} />
+      <WaveDivider className="wave" flip style={{ color: 'var(--color-band-blue)' }} />
     </section>
   )
 }

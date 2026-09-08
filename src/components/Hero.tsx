@@ -53,7 +53,7 @@ export function Hero() {
         </a>
       </div>
 
-      <WaveDivider className="hero-wave" style={{ color: 'var(--lemon-band)' }} />
+      <WaveDivider className="hero-wave" style={{ color: 'var(--color-band-blue)' }} />
     </header>
   )
 }

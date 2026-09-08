@@ -14,7 +14,7 @@ export function RSVPSection() {
 
   return (
     <section className="rsvp" id="confirmar" aria-labelledby="rsvp-title">
-      <WaveDivider className="wave" style={{ color: 'var(--blush-band)' }} />
+      <WaveDivider className="wave" style={{ color: 'var(--color-band-green)' }} />
       <div className="rsvp-inner">
         <Strawberry
           className="section-fruit section-fruit--sway sf-9"
@@ -77,7 +77,7 @@ export function RSVPSection() {
           </Reveal>
         </div>
       </div>
-      <WaveDivider className="wave" flip style={{ color: 'var(--blush-band)' }} />
+      <WaveDivider className="wave" flip style={{ color: 'var(--color-band-green)' }} />
     </section>
   )
 }
