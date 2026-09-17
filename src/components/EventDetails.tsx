@@ -7,6 +7,7 @@ import {
   Pear,
   Strawberry,
   WaveDivider,
+  Watermelon,
 } from './Fruits'
 import { Reveal } from './Reveal'
 
@@ -40,7 +41,7 @@ export function EventDetails() {
                 <div>
                   <p className="detail-label">Cuándo</p>
                   <p className="detail-value">Domingo 27 de septiembre</p>
-                  <p className="detail-sub">2026 · nada de falta</p>
+                  <p className="detail-sub">2026 · ¡no puedes faltar!</p>
                 </div>
               </article>
             </Reveal>
@@ -67,6 +68,19 @@ export function EventDetails() {
                   <p className="detail-label">Dónde</p>
                   <p className="detail-value">Salón Chiquilladas</p>
                   <p className="detail-sub">La Barqueta de Achumani</p>
+                </div>
+              </article>
+            </Reveal>
+
+            <Reveal delay={280}>
+              <article className="detail detail--fun">
+                <div className="detail-icon" aria-hidden="true">
+                  <Watermelon width={52} height={52} pose={{ arms: 'up', mouth: 'cheer' }} />
+                </div>
+                <div>
+                  <p className="detail-label">La diversión</p>
+                  <p className="detail-value">Juegos inflables</p>
+                  <p className="detail-sub">¡Puros brincos y risas!</p>
                 </div>
               </article>
             </Reveal>

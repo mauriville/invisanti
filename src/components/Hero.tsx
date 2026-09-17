@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { PartyPopper } from 'lucide-react'
 import {
   Apple,
@@ -14,8 +15,39 @@ import {
 } from './Fruits'
 
 export function Hero() {
+  const sceneRef = useRef<HTMLDivElement>(null)
+  const heroRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const scene = sceneRef.current
+    const hero = heroRef.current
+    if (!scene || !hero) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    let raf = 0
+    const update = () => {
+      raf = 0
+      const top = scene.getBoundingClientRect().top
+      const pin = scene.offsetHeight - hero.offsetHeight
+      const progress = pin > 0 ? Math.min(1, Math.max(0, -top / pin)) : 0
+      hero.style.setProperty('--sp', progress.toFixed(4))
+    }
+    const schedule = () => {
+      if (!raf) raf = requestAnimationFrame(update)
+    }
+    update()
+    window.addEventListener('scroll', schedule, { passive: true })
+    window.addEventListener('resize', schedule, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', schedule)
+      window.removeEventListener('resize', schedule)
+      if (raf) cancelAnimationFrame(raf)
+    }
+  }, [])
+
   return (
-    <header className="hero">
+    <div className="hero-scene" ref={sceneRef}>
+      <header className="hero" ref={heroRef}>
       <Sprinkles className="hero-sprinkles" />
       <Strawberry className="float f-01" width={76} height={76} pose={{ arms: 'up', mouth: 'cheer' }} />
       <Watermelon className="float f-02" width={86} height={86} pose={{ arms: 'down', mood: 'happy' }} />
@@ -41,10 +73,22 @@ export function Hero() {
             </span>
             <Squiggle className="hero-squiggle" />
           </span>
-          <span className="hero-title-rest">está de cumpleaños!</span>
+          <span className="hero-title-rest">cumple 3 años!</span>
         </h1>
+        <div className="hero-photo-wrap">
+          <span className="hero-photo-sun" aria-hidden="true" />
+          <img
+            className="hero-photo"
+            src="/santiago.png"
+            alt="Santiago sonriendo en su cumpleaños número 3"
+            width={433}
+            height={577}
+            loading="eager"
+            decoding="async"
+          />
+        </div>
         <p className="hero-sub">
-          Ven a celebrar un día lleno de colores, juegos y muchas frutas. ¡La fiesta se pone rica!
+          Ven a celebrar un día lleno de colores, juegos inflables y pura diversión.
         </p>
         <p className="hero-date">Domingo 27 de septiembre · 2026</p>
         <a className="cta-button" href="#confirmar">
@@ -54,6 +98,7 @@ export function Hero() {
       </div>
 
       <WaveDivider className="hero-wave" style={{ color: 'var(--color-band-blue)' }} />
-    </header>
+      </header>
+    </div>
   )
 }

@@ -8,7 +8,7 @@ export const parents: Record<Parent, { role: string; name: string; phone: string
 export function buildWhatsAppMessage(parent: Parent, guests: number): string {
   const { name } = parents[parent]
   const firstLine = `Hola ${name} 👋`
-  const secondLine = `Confirmo ${guests === 1 ? 'mi' : 'nuestra'} asistencia al cumpleaños de Santiago 🎉🍉`
+  const secondLine = `Confirmo ${guests === 1 ? 'mi' : 'nuestra'} asistencia: ¡Santiago cumple 3 años! 🎉🍉`
   const thirdLine = guests === 1 ? 'Seré 1 persona.' : `Seremos ${guests} personas.`
   return [firstLine, secondLine, thirdLine].join('\n')
 }

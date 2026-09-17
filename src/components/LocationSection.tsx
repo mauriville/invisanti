@@ -16,7 +16,7 @@ export function LocationSection() {
       <div className="container">
         <Reveal className="section-head">
           <h2 id="location-title">¿Dónde celebramos?</h2>
-          <p className="lead">Un rincón hecho para jugar, reír y llenarse de manchitas de fruta.</p>
+          <p className="lead">Un lugar hecho para jugar, reír y brincar sin parar.</p>
         </Reveal>
 
         <Reveal delay={90}>
@@ -33,14 +33,16 @@ export function LocationSection() {
             <span className="map-char map-char--br" aria-hidden="true">
               <Grapes width={42} height={42} pose={{ arms: 'up', mood: 'wink' }} />
             </span>
-            <iframe
-              className="map-embed"
-              src={MAPS_EMBED_URL}
-              title="Mapa de la ubicación del Salón de Eventos Infantiles Chiquilladas"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+            <div className="map-view">
+              <iframe
+                className="map-embed"
+                src={MAPS_EMBED_URL}
+                title="Mapa de la ubicación del Salón de Eventos Infantiles Chiquilladas"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
             <div className="map-body">
               <p className="venue-name">Salón de Eventos Infantiles Chiquilladas</p>
               <p className="venue-address">

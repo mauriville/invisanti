@@ -10,7 +10,9 @@ const ORDER: Parent[] = ['mama', 'papa']
 export function RSVPSection() {
   const [guests, setGuests] = useState(2)
   const feedback =
-    guests === 1 ? '¡Genial! Te esperamos' : `¡Genial! Los esperamos a los ${guests}`
+    guests === 1
+      ? '¡Genial! Esperamos a 1 persona.'
+      : `¡Genial! Esperamos a ${guests} personas.`
 
   return (
     <section className="rsvp" id="confirmar" aria-labelledby="rsvp-title">
