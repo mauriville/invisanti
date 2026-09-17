@@ -1145,6 +1145,14 @@ h2 {
   }
 }
 
+@media (min-width: 1100px) and (max-width: 1599px) {
+  .hero {
+    --lane-outer: clamp(24px, 4vw, 56px);
+    --lane-middle: max(190px, calc(25vw - 100px));
+    --lane-inner: max(290px, calc(50vw - 300px));
+  }
+}
+
 @media (min-width: 1100px) {
   .float,
   .section-fruit,
