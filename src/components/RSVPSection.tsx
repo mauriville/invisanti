@@ -29,6 +29,22 @@ export function RSVPSection() {
         <Watermelon className="section-fruit sf-12" width={50} height={50} pose={{ arms: 'up', mouth: 'cheer' }} />
         <Lemon className="section-fruit sf-13" width={48} height={48} pose={{ arms: 'up', mood: 'happy' }} />
         <Pear className="section-fruit sf-14" width={46} height={46} pose={{ arms: 'shy', mood: 'wink' }} />
+        <Watermelon className="section-fruit sf-29" width={50} height={50} pose={{ arms: 'wave' }} />
+        <Lemon
+          className="section-fruit section-fruit--sway sf-30"
+          width={48}
+          height={48}
+          pose={{ arms: 'up', mouth: 'cheer' }}
+        />
+        <Orange className="section-fruit sf-31" width={48} height={48} pose={{ arms: 'up', mood: 'wink' }} />
+        <Grapes className="section-fruit sf-32" width={46} height={46} pose={{ arms: 'shy', mouth: 'soft' }} />
+        <Strawberry className="section-fruit sf-33" width={48} height={48} pose={{ arms: 'down', mouth: 'soft' }} />
+        <Pear
+          className="section-fruit section-fruit--sway sf-34"
+          width={48}
+          height={48}
+          pose={{ arms: 'up', mood: 'happy' }}
+        />
         <div className="container">
           <Reveal className="section-head">
             <h2 id="rsvp-title">¿Nos acompañas?</h2>
@@ -42,6 +58,27 @@ export function RSVPSection() {
               <Grapes width={44} height={44} pose={{ arms: 'up', mouth: 'cheer' }} style={{ transform: 'rotate(-6deg)' }} />
               <Strawberry width={50} height={50} pose={{ arms: 'wave' }} />
               <Lemon width={46} height={46} pose={{ arms: 'up', mood: 'happy' }} style={{ transform: 'rotate(6deg)' }} />
+              <Orange
+                className="cheer-extra"
+                width={44}
+                height={44}
+                pose={{ arms: 'wave', mood: 'happy' }}
+                style={{ transform: 'rotate(-5deg)' }}
+              />
+              <Watermelon
+                className="cheer-extra-plus"
+                width={48}
+                height={48}
+                pose={{ arms: 'up', mouth: 'cheer' }}
+                style={{ transform: 'rotate(5deg)' }}
+              />
+              <Pear
+                className="cheer-extra-plus"
+                width={42}
+                height={42}
+                pose={{ arms: 'shy', mood: 'wink' }}
+                style={{ transform: 'rotate(-4deg)' }}
+              />
             </div>
 
             <AttendanceSelector value={guests} onChange={setGuests} />

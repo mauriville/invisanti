@@ -1,5 +1,5 @@
 import { MapPin } from 'lucide-react'
-import { Apple, Grapes, OrangeSlice, ParadeDivider, Pear, Strawberry, Watermelon } from './Fruits'
+import { Apple, Grapes, Lemon, Orange, OrangeSlice, ParadeDivider, Pear, Strawberry, Watermelon } from './Fruits'
 import { Reveal } from './Reveal'
 
 export const MAPS_URL =
@@ -13,6 +13,20 @@ export function LocationSection() {
     <section className="location" aria-labelledby="location-title">
       <Pear className="section-fruit sf-7" width={46} height={46} pose={{ arms: 'shy', mouth: 'soft' }} />
       <OrangeSlice className="section-fruit sf-8" width={48} height={48} pose={{ arms: 'wave' }} />
+      <Lemon
+        className="section-fruit section-fruit--sway sf-25"
+        width={48}
+        height={48}
+        pose={{ arms: 'shy', mood: 'happy' }}
+      />
+      <Orange className="section-fruit sf-26" width={48} height={48} pose={{ arms: 'wave' }} />
+      <Watermelon className="section-fruit sf-27" width={52} height={52} pose={{ arms: 'up', mouth: 'cheer' }} />
+      <Strawberry
+        className="section-fruit section-fruit--sway sf-28"
+        width={48}
+        height={48}
+        pose={{ arms: 'down', mood: 'wink' }}
+      />
       <div className="container">
         <Reveal className="section-head">
           <h2 id="location-title">¿Dónde celebramos?</h2>

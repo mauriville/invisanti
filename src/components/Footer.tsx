@@ -10,6 +10,22 @@ export function Footer() {
         pose={{ arms: 'wave', mood: 'happy' }}
       />
       <Strawberry className="section-fruit sf-16" width={66} height={66} pose={{ arms: 'up', mouth: 'cheer' }} />
+      <OrangeSlice className="section-fruit sf-35" width={52} height={52} pose={{ arms: 'wave', mood: 'wink' }} />
+      <Grapes className="section-fruit sf-36" width={50} height={50} pose={{ arms: 'up', mouth: 'cheer' }} />
+      <Lemon
+        className="section-fruit section-fruit--sway sf-37"
+        width={52}
+        height={52}
+        pose={{ arms: 'shy', mood: 'happy' }}
+      />
+      <Watermelon className="section-fruit sf-38" width={54} height={54} pose={{ arms: 'wave' }} />
+      <Pear
+        className="section-fruit section-fruit--sway sf-39"
+        width={50}
+        height={50}
+        pose={{ arms: 'up', mood: 'wink' }}
+      />
+      <Strawberry className="section-fruit sf-40" width={52} height={52} pose={{ arms: 'down', mouth: 'cheer' }} />
       <div className="container">
         <div className="footer-fruits" aria-hidden="true">
           <Watermelon width={46} height={46} pose={{ arms: 'down', mood: 'happy' }} style={{ transform: 'rotate(-6deg)' }} />
@@ -20,6 +36,20 @@ export function Footer() {
           <Lemon width={50} height={50} pose={{ arms: 'up', mood: 'happy' }} style={{ transform: 'rotate(7deg)' }} />
           <Grapes width={46} height={46} pose={{ arms: 'up', mouth: 'cheer' }} style={{ transform: 'rotate(-6deg)' }} />
           <Orange width={42} height={42} pose={{ arms: 'wave' }} style={{ transform: 'rotate(8deg)' }} />
+          <OrangeSlice
+            className="footer-extra"
+            width={42}
+            height={42}
+            pose={{ arms: 'down', mood: 'happy' }}
+            style={{ transform: 'rotate(-6deg)' }}
+          />
+          <Strawberry
+            className="footer-extra"
+            width={46}
+            height={46}
+            pose={{ arms: 'shy', mood: 'wink' }}
+            style={{ transform: 'rotate(6deg)' }}
+          />
         </div>
         <h2 className="footer-title">¡Los esperamos para celebrar juntos!</h2>
         <p className="footer-thanks">

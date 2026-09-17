@@ -2,6 +2,7 @@ import {
   Apple,
   Grapes,
   Lemon,
+  Orange,
   OrangeClock,
   OrangeSlice,
   Pear,
@@ -26,6 +27,24 @@ export function EventDetails() {
           pose={{ arms: 'wave' }}
         />
         <Apple className="section-fruit sf-6" width={46} height={46} pose={{ arms: 'up', mouth: 'cheer' }} />
+        <Orange className="section-fruit sf-17" width={50} height={50} pose={{ arms: 'wave', mood: 'happy' }} />
+        <Strawberry className="section-fruit sf-18" width={48} height={48} pose={{ arms: 'up' }} />
+        <Lemon
+          className="section-fruit section-fruit--sway sf-19"
+          width={52}
+          height={52}
+          pose={{ arms: 'up', mood: 'happy' }}
+        />
+        <Grapes className="section-fruit sf-20" width={48} height={48} pose={{ arms: 'down' }} />
+        <Watermelon className="section-fruit sf-21" width={54} height={54} pose={{ arms: 'down', mouth: 'soft' }} />
+        <Apple className="section-fruit sf-22" width={50} height={50} pose={{ arms: 'wave' }} />
+        <OrangeSlice
+          className="section-fruit section-fruit--sway sf-23"
+          width={52}
+          height={52}
+          pose={{ arms: 'up', mood: 'wink' }}
+        />
+        <Pear className="section-fruit sf-24" width={50} height={50} pose={{ arms: 'shy', mood: 'happy' }} />
         <div className="container">
           <Reveal className="section-head">
             <h2 id="details-title">El gran día</h2>

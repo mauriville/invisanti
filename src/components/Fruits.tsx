@@ -614,6 +614,20 @@ export function ParadeDivider() {
       <Watermelon width={40} height={40} pose={{ arms: 'down', mood: 'happy' }} style={{ transform: 'rotate(6deg)' }} />
       <Grapes width={36} height={36} pose={{ arms: 'up', mood: 'wink' }} style={{ transform: 'rotate(-4deg)' }} />
       <Apple width={40} height={40} pose={{ arms: 'wave' }} style={{ transform: 'rotate(5deg)' }} />
+      <Pear
+        className="parade-extra"
+        width={38}
+        height={38}
+        pose={{ arms: 'up', mood: 'wink' }}
+        style={{ transform: 'rotate(7deg)' }}
+      />
+      <OrangeSlice
+        className="parade-extra"
+        width={36}
+        height={36}
+        pose={{ arms: 'down', mouth: 'soft' }}
+        style={{ transform: 'rotate(-5deg)' }}
+      />
     </div>
   )
 }

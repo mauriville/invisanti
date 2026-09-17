@@ -449,7 +449,47 @@ h2 {
 .f-11,
 .f-12,
 .f-13,
-.f-14 {
+.f-14,
+.f-15,
+.f-16,
+.f-17,
+.f-18,
+.f-19,
+.f-20,
+.f-21,
+.f-22 {
+  display: none;
+}
+
+/* Extra fruit cameos for wide desktops */
+.sf-17,
+.sf-18,
+.sf-19,
+.sf-20,
+.sf-21,
+.sf-22,
+.sf-23,
+.sf-24,
+.sf-25,
+.sf-26,
+.sf-27,
+.sf-28,
+.sf-29,
+.sf-30,
+.sf-31,
+.sf-32,
+.sf-33,
+.sf-34,
+.sf-35,
+.sf-36,
+.sf-37,
+.sf-38,
+.sf-39,
+.sf-40,
+.parade-extra,
+.cheer-extra,
+.cheer-extra-plus,
+.footer-extra {
   display: none;
 }
 
@@ -1024,6 +1064,15 @@ h2 {
 
 /* ============ Desktop ============ */
 @media (min-width: 760px) {
+  /* Fruit lanes: measured from the centered 640px content column outward,
+     so the gutters stay filled at any desktop width */
+  :root {
+    --gutter: calc(50% - 320px);
+    --lane-outer: max(12px, calc(var(--gutter) * 0.06));
+    --lane-middle: max(14px, min(calc(var(--gutter) * 0.42), calc(50% - 500px)));
+    --lane-inner: max(14px, min(calc(var(--gutter) * 0.78), calc(50% - 400px)));
+  }
+
   .container {
     padding-inline: 32px;
   }
@@ -1032,26 +1081,26 @@ h2 {
     padding-top: 56px;
   }
 
-  .f-01 { top: 12%; left: 7%; width: 88px; height: 88px; }
-  .f-02 { top: 13%; right: 7%; width: 96px; height: 96px; }
-  .f-03 { top: 34%; left: 4%; width: 72px; height: 72px; }
-  .f-04 { top: 36%; right: 4.5%; width: 70px; height: 70px; }
-  .f-05 { top: 55%; left: 6.5%; width: 76px; height: 76px; }
-  .f-06 { top: 57%; right: 5.5%; width: 72px; height: 72px; }
-  .f-07 { bottom: 18%; left: 11%; width: 62px; height: 62px; }
-  .f-08 { bottom: 17%; right: 10%; width: 66px; height: 66px; }
-  .f-09 { bottom: 8%; left: 21%; width: 56px; height: 56px; }
-  .f-10 { bottom: 8%; right: 20%; width: 54px; height: 54px; }
+  .f-01 { top: 12%; left: var(--lane-outer); width: 88px; height: 88px; }
+  .f-02 { top: 13%; right: var(--lane-outer); width: 96px; height: 96px; }
+  .f-03 { top: 34%; left: var(--lane-inner); width: 72px; height: 72px; }
+  .f-04 { top: 36%; right: var(--lane-inner); width: 70px; height: 70px; }
+  .f-05 { top: 55%; left: var(--lane-inner); width: 76px; height: 76px; }
+  .f-06 { top: 57%; right: var(--lane-inner); width: 72px; height: 72px; }
+  .f-07 { bottom: 18%; left: var(--lane-inner); width: 62px; height: 62px; }
+  .f-08 { bottom: 17%; right: var(--lane-inner); width: 66px; height: 66px; }
+  .f-09 { bottom: 8%; left: var(--lane-outer); width: 56px; height: 56px; }
+  .f-10 { bottom: 8%; right: var(--lane-outer); width: 54px; height: 54px; }
   .f-11,
   .f-12,
   .f-13,
   .f-14 {
     display: block;
   }
-  .f-11 { top: 44%; left: 12.5%; width: 62px; height: 62px; }
-  .f-12 { top: 46%; right: 12%; width: 58px; height: 58px; }
-  .f-13 { bottom: 27%; left: 18%; width: 58px; height: 58px; }
-  .f-14 { bottom: 26%; right: 17%; width: 54px; height: 54px; }
+  .f-11 { top: 44%; left: var(--lane-outer); width: 62px; height: 62px; }
+  .f-12 { top: 46%; right: var(--lane-outer); width: 58px; height: 58px; }
+  .f-13 { bottom: 27%; left: var(--lane-outer); width: 58px; height: 58px; }
+  .f-14 { bottom: 26%; right: var(--lane-outer); width: 54px; height: 54px; }
 
   .sf-1, .sf-7 { width: 54px; height: 54px; }
   .sf-2, .sf-8 { width: 56px; height: 56px; }
@@ -1062,8 +1111,8 @@ h2 {
   .sf-6 { right: 12%; }
   .sf-9 { width: 58px; height: 58px; }
   .sf-10 { width: 56px; height: 56px; }
-  .sf-13 { left: 12%; width: 56px; height: 56px; }
-  .sf-14 { right: 13%; width: 54px; height: 54px; }
+  .sf-13 { left: var(--lane-inner); width: 56px; height: 56px; }
+  .sf-14 { right: var(--lane-inner); width: 54px; height: 54px; }
   .sf-15 { width: 76px; height: 76px; top: 90px; left: -16px; }
   .sf-16 { width: 80px; height: 80px; bottom: 120px; right: -14px; }
 
@@ -1088,6 +1137,14 @@ h2 {
 }
 
 /* ============ Large desktop ============ */
+/* Tablet: the hero's focal content is much narrower than the 640px
+   container, so pull its inner-lane fruits in beside the photo/text */
+@media (min-width: 760px) and (max-width: 1099px) {
+  .hero {
+    --lane-inner: max(120px, calc(50% - 258px));
+  }
+}
+
 @media (min-width: 1100px) {
   .float,
   .section-fruit,
@@ -1097,6 +1154,162 @@ h2 {
   .footer-fruits,
   .parade {
     zoom: 1.22;
+  }
+
+  .f-15,
+  .f-16,
+  .f-17,
+  .f-18 {
+    display: block;
+  }
+
+  .f-15 { top: 8%; left: var(--lane-outer); width: 60px; height: 60px; --rot: -9deg; --drift: -120px; --spin: -10deg; }
+  .f-16 { top: 20%; right: var(--lane-middle); width: 64px; height: 64px; --rot: 8deg; --drift: 90px; --spin: 11deg; }
+  .f-17 { bottom: 30%; left: var(--lane-inner); width: 58px; height: 58px; --rot: 10deg; --drift: 70px; --spin: 12deg; }
+  .f-18 { bottom: 33%; right: var(--lane-inner); width: 56px; height: 56px; --rot: -8deg; --drift: -80px; --spin: -9deg; }
+
+  /* Spread the base ring across the three lanes */
+  .f-01 { left: var(--lane-middle); }
+  .f-05 { left: var(--lane-middle); }
+  .f-07 { left: var(--lane-middle); }
+  .f-09 { left: var(--lane-inner); }
+  .f-06 { right: var(--lane-middle); }
+  .f-08 { right: var(--lane-middle); }
+  .f-10 { right: var(--lane-inner); }
+
+  .sf-17 { top: 8%; left: var(--lane-middle); }
+  .sf-18 { top: 26%; right: var(--lane-middle); }
+  .sf-19 { top: 42%; left: var(--lane-inner); }
+  .sf-20 { bottom: 16%; right: var(--lane-inner); }
+  .sf-25 { top: 250px; right: var(--lane-middle); }
+  .sf-26 { bottom: 150px; left: var(--lane-middle); }
+  .sf-29 { top: 12%; left: var(--lane-outer); }
+  .sf-30 { top: 28%; right: var(--lane-middle); }
+  .sf-31 { bottom: 34%; left: var(--lane-middle); }
+  .sf-32 { bottom: 12%; right: var(--lane-outer); }
+  .sf-35 { top: 60px; right: var(--lane-outer); }
+  .sf-36 { top: 34%; left: var(--lane-middle); }
+  .sf-37 { bottom: 80px; right: var(--lane-middle); }
+  .sf-38 { bottom: 24px; left: var(--lane-inner); }
+
+  .sf-17,
+  .sf-18,
+  .sf-19,
+  .sf-20,
+  .sf-25,
+  .sf-26,
+  .sf-29,
+  .sf-30,
+  .sf-31,
+  .sf-32,
+  .sf-35,
+  .sf-36,
+  .sf-37,
+  .sf-38 {
+    width: 56px;
+    height: 56px;
+  }
+
+  .sf-17,
+  .sf-18,
+  .sf-19,
+  .sf-20,
+  .sf-25,
+  .sf-26,
+  .sf-29,
+  .sf-30,
+  .sf-31,
+  .sf-32,
+  .sf-35,
+  .sf-36,
+  .sf-37,
+  .sf-38 {
+    display: block;
+  }
+
+  .cheer-extra {
+    display: block;
+  }
+}
+
+/* ============ Extra large desktop ============ */
+@media (min-width: 1600px) {
+  .float,
+  .section-fruit,
+  .map-char,
+  .detail-icon,
+  .rsvp-cheer,
+  .footer-fruits,
+  .parade {
+    zoom: 1.28;
+  }
+
+  .f-19,
+  .f-20,
+  .f-21,
+  .f-22 {
+    display: block;
+  }
+
+  .f-19 { top: 16%; left: var(--lane-inner); width: 58px; height: 58px; --rot: 7deg; --drift: -60px; --spin: 8deg; }
+  .f-20 { top: 38%; right: var(--lane-outer); width: 62px; height: 62px; --rot: -11deg; --drift: 120px; --spin: -11deg; }
+  .f-21 { bottom: 20%; left: var(--lane-inner); width: 54px; height: 54px; --rot: -6deg; --drift: 40px; --spin: -7deg; }
+  .f-22 { bottom: 42%; right: var(--lane-outer); width: 56px; height: 56px; --rot: 12deg; --drift: -100px; --spin: 13deg; }
+
+  /* Rebalance lanes for the extra ring */
+  .f-03 { left: var(--lane-outer); }
+  .f-05 { left: var(--lane-inner); }
+  .f-07 { left: var(--lane-outer); }
+  .f-09 { left: var(--lane-middle); }
+  .f-13 { left: var(--lane-middle); }
+  .f-06 { right: var(--lane-inner); }
+  .f-08 { right: var(--lane-outer); }
+  .f-10 { right: var(--lane-middle); }
+  .f-12 { right: var(--lane-middle); }
+  .f-14 { right: var(--lane-inner); }
+
+  .sf-21 { top: 18%; left: var(--lane-outer); }
+  .sf-22 { top: 36%; right: var(--lane-outer); }
+  .sf-23 { top: 58%; left: var(--lane-middle); }
+  .sf-24 { bottom: 8%; right: var(--lane-middle); }
+  .sf-27 { top: 60px; left: var(--lane-inner); }
+  .sf-28 { bottom: 60px; right: var(--lane-inner); }
+  .sf-33 { top: 8%; right: var(--lane-inner); }
+  .sf-34 { bottom: 44%; left: var(--lane-inner); }
+  .sf-39 { top: 18%; left: var(--lane-outer); }
+  .sf-40 { bottom: 32%; right: var(--lane-inner); }
+
+  .sf-21,
+  .sf-22,
+  .sf-23,
+  .sf-24,
+  .sf-27,
+  .sf-28,
+  .sf-33,
+  .sf-34,
+  .sf-39,
+  .sf-40 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sf-21,
+  .sf-22,
+  .sf-23,
+  .sf-24,
+  .sf-27,
+  .sf-28,
+  .sf-33,
+  .sf-34,
+  .sf-39,
+  .sf-40 {
+    display: block;
+  }
+
+  .parade-extra,
+  .cheer-extra-plus,
+  .footer-extra {
+    display: block;
   }
 }
 

@@ -63,6 +63,14 @@ export function Hero() {
       <Strawberry className="float f-12" width={58} height={58} pose={{ arms: 'shy', mouth: 'soft' }} />
       <Grapes className="float f-13" width={58} height={58} pose={{ arms: 'down', mood: 'wink' }} />
       <Orange className="float f-14" width={54} height={54} pose={{ arms: 'down', mood: 'happy' }} />
+      <Strawberry className="float f-15" width={56} height={56} pose={{ arms: 'up', mouth: 'cheer' }} />
+      <Watermelon className="float f-16" width={56} height={56} pose={{ arms: 'down', mood: 'happy' }} />
+      <Apple className="float f-17" width={56} height={56} pose={{ arms: 'wave', mood: 'happy' }} />
+      <Lemon className="float f-18" width={56} height={56} pose={{ arms: 'shy', mood: 'wink' }} />
+      <OrangeSlice className="float f-19" width={52} height={52} pose={{ arms: 'up', mood: 'happy' }} />
+      <Grapes className="float f-20" width={52} height={52} pose={{ arms: 'wave' }} />
+      <Pear className="float f-21" width={52} height={52} pose={{ arms: 'down', mouth: 'soft' }} />
+      <Strawberry className="float f-22" width={52} height={52} pose={{ arms: 'shy', mood: 'happy' }} />
 
       <div className="hero-content container">
         <p className="hero-chip">¡Estás invitado!</p>
